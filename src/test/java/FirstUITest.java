@@ -9,16 +9,16 @@ import java.util.concurrent.TimeUnit;
 
 public class FirstUITest {
 
-//    @Test
-//    public void firstSeleniumTest(){
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\38098\\IdeaProjects\\AQA2023\\Chromedriver\\chromedriver.exe");
-//        WebDriver driver = new ChromeDriver();
-//
-//        driver.get("http://www.google.com/");
-//        driver.findElement(By.name("q")).sendKeys("testfort");
-//        driver.quit();
-//
-//    }
+    @Test
+    public void firstSeleniumTest(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\38098\\IdeaProjects\\AQA2023\\Chromedriver\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("http://www.google.com/");
+        driver.findElement(By.name("q")).sendKeys("testfort");
+        driver.quit();
+
+    }
 
     @Test
     public void firstSeleniumTestChromeDriverLogin() {
