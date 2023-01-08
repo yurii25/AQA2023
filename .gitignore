@@ -1,5 +1,5 @@
 
-
+.idea/workspace.xml
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -9,7 +9,6 @@ target/
 ### IntelliJ IDEA ###
 .idea/misc.xml
 .idea/vcs.xml
-.idea/workspace.xml
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
