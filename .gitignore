@@ -3,12 +3,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+.idea/workspace.xml
 
 ### IntelliJ IDEA ###
-.idea/workspace.xml
-out/
-.idea/workspace.xml
 
 .idea/misc.xml
 .idea/vcs.xml

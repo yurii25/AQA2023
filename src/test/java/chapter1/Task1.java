@@ -69,7 +69,7 @@ public class Task1 {
 
         driver.findElement(By.xpath("//button[@ng-click='reset()']")).click();
 
-        driver.quit(); // test1
+        driver.quit(); // test2
 
     }
 }
