@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80939476-8edf-427d-98c0-ed270f7ef2f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FirstUITest.java" afterDir="false" />
+    <list default="true" id="80939476-8edf-427d-98c0-ed270f7ef2f8" name="Changes" comment="initial">
+      <change afterPath="$PROJECT_DIR$/src/test/java/chapter1/Task1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FirstUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstUITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,18 +44,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.FirstUITest">
-    <configuration name="FirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA2023" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Task1">
     <configuration name="FirstUITest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA2023" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,12 +80,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstUITest.firstSeleniumTestWithManager" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter1" />
+      <option name="MAIN_CLASS_NAME" value="chapter1.Task1" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA2023" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstUITest" />
-      <option name="METHOD_NAME" value="firstSeleniumTestWithManager" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="Task2" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -109,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Task1" />
         <item itemvalue="TestNG.FirstUITest" />
+        <item itemvalue="TestNG.Task2" />
         <item itemvalue="TestNG.FirstUITest.firstSeleniumTestChromeDriverLogin" />
         <item itemvalue="TestNG.FirstUITest.firstSeleniumTestFirefoxDriverLogin" />
-        <item itemvalue="TestNG.FirstUITest.firstSeleniumTestWithManager" />
-        <item itemvalue="TestNG.FirstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -126,6 +127,28 @@
       <option name="presentableId" value="Default" />
       <updated>1672779372823</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1672787352467</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672787352467</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <created>1672787476873</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672787476873</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial">
+      <created>1672787580830</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672787580830</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,5 +161,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial" />
   </component>
 </project>
