@@ -44,4 +44,11 @@ public class FirstUITest {
 
     }
 
+// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+// WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+//        WebElement result1 = new WebDriverWait(driver, Duration.ofSeconds(1))
+//                .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@ng-click='customer()']")));
+
 }
