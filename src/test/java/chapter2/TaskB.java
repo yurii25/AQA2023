@@ -20,11 +20,6 @@ public class TaskB {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--start-fullscreen");
-//        WebDriver driver = new ChromeDriver(options);
-
-
         driver.get("https://www.saucedemo.com/");
 
         By locator1 = By.xpath("//input[@id='user-name']");
