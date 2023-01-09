@@ -28,39 +28,35 @@ public class Task1 {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
         driver.findElement(locator2).click();
 
-        By locator3 = By.xpath("//option[text() = 'Harry Potter']");
+        driver.findElement(By.xpath("//option[text() = 'Harry Potter']")).click();
+
+        driver.findElement(By.xpath("//button[@type = 'submit']")).click();
+
+        By locator3 = By.xpath("//button[@ng-click='deposit()']");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator3));
         driver.findElement(locator3).click();
 
-        By locator4 = By.xpath("//button[@type = 'submit']");
+        By locator4 = By.xpath("//input");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator4));
-        driver.findElement(locator4).click();
-
-        By locator5 = By.xpath("//button[@ng-click='deposit()']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator5));
-        driver.findElement(locator5).click();
-
-        By locator6 = By.xpath("//input");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator6));
-        driver.findElement(locator6).sendKeys("1000");
+        driver.findElement(locator4).sendKeys("1000");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         driver.findElement(By.xpath("//button[@ng-click='withdrawl()']")).click();
 
-        By locator7 = By.xpath("//input");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator7));
-        driver.findElement(locator7).sendKeys("900");
+        By locator5= By.xpath("//input");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator5));
+        driver.findElement(locator5).sendKeys("900");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        By locator8 = By.xpath("//button[@ng-click='transactions()']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));
-        driver.findElement(locator8).click();
+        By locator6 = By.xpath("//button[@ng-click='transactions()']");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator6));
+        driver.findElement(locator6).click();
 
-        By locator9 = By.xpath("//button[@ng-click='reset()']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator9));
-        driver.findElement(locator9).click();
+        By locator7 = By.xpath("//button[@ng-click='reset()']");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator7));
+        driver.findElement(By.xpath("//button[@ng-click='reset()']")).click();
 
         driver.quit();
 
