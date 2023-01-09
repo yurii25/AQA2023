@@ -27,7 +27,7 @@ public class TaskA {
         driver.get("https://demoqa.com/login");
 
         By locator1 = By.xpath("//input[@id='userName']");
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
         driver.findElement(locator1).sendKeys("testY");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Qwerty1@");
@@ -37,7 +37,7 @@ public class TaskA {
         By locator2 = By.xpath("//button[@id='login']");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
 
-        //Scroll down till the bottom of the page - реклама не дає на кнопку натиснути)
+        //Scroll down till the bottom of the page
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
@@ -66,13 +66,17 @@ public class TaskA {
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+
         driver.findElement(By.xpath("//button[@id='addNewRecordButton']")).click();
+
+
 
         driver.switchTo().defaultContent();
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-        By locator6 = By.xpath("//a[text()='You Don't Know JS']");
+        By locator6 = By.xpath("//a[contains(@href,'/books?book=9781491904244')]");  //  //a[text()='You Don't Know JS']
+
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator6));
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -84,22 +88,29 @@ public class TaskA {
 
         driver.findElement(locator5).click();
 
-        driver.switchTo().defaultContent();
 
-//        By locator7 = By.xpath("//span[text()='Profile']");
-//        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator7));
         driver.findElement(By.xpath("//span[text()='Profile']")).click();
 
-        By locator7 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator7));
-        driver.findElement(locator7).click();
-
-
-        By locator8 = By.xpath("//button[@id='closeSmallModal-ok']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));
-        driver.findElement(locator8).click();
 
         driver.switchTo().defaultContent();
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+
+        By locator7 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator7));
+
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        driver.findElement(locator7).click();
+
+//        driver.switchTo().alert().accept();
+//        driver.switchTo().defaultContent();
+
+
+//        By locator8 = By.xpath("//button[@id='closeSmallModal-ok']");
+//        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));
+//        driver.findElement(locator8).click();
+//
+//        driver.switchTo().defaultContent();
 
 //        driver.quit();
     }

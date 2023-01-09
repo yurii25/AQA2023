@@ -19,7 +19,6 @@ public class TaskD {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.amazon.com/");
-//        driver.switchTo().defaultContent();
 
         By locator1 = By.xpath("//a [contains(@href,'/deals?ref_=nav_cs_gb')]");
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -46,7 +45,7 @@ public class TaskD {
         driver.findElement(locator5).click();
 
 
-//        driver.quit();
+        driver.quit();
 
 
     }
