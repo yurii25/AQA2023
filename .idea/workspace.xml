@@ -42,43 +42,8 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Task1">
-    <configuration name="FirstUITest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA2023" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstUITest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstUITest.firstSeleniumTestChromeDriverLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA2023" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstUITest" />
-      <option name="METHOD_NAME" value="firstSeleniumTestChromeDriverLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstUITest.firstSeleniumTestFirefoxDriverLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA2023" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstUITest" />
-      <option name="METHOD_NAME" value="firstSeleniumTestFirefoxDriverLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task1" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TaskA">
+    <configuration name="Task4" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA2023" />
       <extension name="coverage">
         <pattern>
@@ -87,7 +52,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="chapter1" />
-      <option name="MAIN_CLASS_NAME" value="chapter1.Task1" />
+      <option name="MAIN_CLASS_NAME" value="chapter1.Task4" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -95,10 +60,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskA" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA2023" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter2" />
+      <option name="MAIN_CLASS_NAME" value="chapter2.TaskA" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskB" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter2" />
+      <option name="MAIN_CLASS_NAME" value="chapter2.TaskB" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskC" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter2" />
+      <option name="MAIN_CLASS_NAME" value="chapter2.TaskC" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskD" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter2" />
+      <option name="MAIN_CLASS_NAME" value="chapter2.TaskD" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -108,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Task1" />
-        <item itemvalue="TestNG.FirstUITest" />
-        <item itemvalue="TestNG.Task2" />
-        <item itemvalue="TestNG.FirstUITest.firstSeleniumTestChromeDriverLogin" />
-        <item itemvalue="TestNG.FirstUITest.firstSeleniumTestFirefoxDriverLogin" />
+        <item itemvalue="TestNG.TaskA" />
+        <item itemvalue="TestNG.TaskD" />
+        <item itemvalue="TestNG.TaskC" />
+        <item itemvalue="TestNG.TaskB" />
+        <item itemvalue="TestNG.Task4" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +203,91 @@
       <option name="project" value="LOCAL" />
       <updated>1673207625867</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="initial">
+      <created>1673207765829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673207765829</updated>
+    </task>
+    <task id="LOCAL-00010" summary="initial">
+      <created>1673207795844</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673207795844</updated>
+    </task>
+    <task id="LOCAL-00011" summary="initial">
+      <created>1673208045135</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673208045135</updated>
+    </task>
+    <task id="LOCAL-00012" summary="initial">
+      <created>1673208401375</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673208401375</updated>
+    </task>
+    <task id="LOCAL-00013" summary="initial">
+      <created>1673265330460</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673265330460</updated>
+    </task>
+    <task id="LOCAL-00014" summary="initial">
+      <created>1673266498337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673266498337</updated>
+    </task>
+    <task id="LOCAL-00015" summary="initial">
+      <created>1673279218442</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673279218442</updated>
+    </task>
+    <task id="LOCAL-00016" summary="initial">
+      <created>1673287502960</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673287502960</updated>
+    </task>
+    <task id="LOCAL-00017" summary="initial">
+      <created>1673292027099</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673292027099</updated>
+    </task>
+    <task id="LOCAL-00018" summary="initial">
+      <created>1673294095910</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673294095910</updated>
+    </task>
+    <task id="LOCAL-00019" summary="initial">
+      <created>1673297878524</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673297878524</updated>
+    </task>
+    <task id="LOCAL-00020" summary="initial">
+      <created>1673367764157</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673367764157</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
