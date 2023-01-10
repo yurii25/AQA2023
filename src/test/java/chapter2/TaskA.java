@@ -23,29 +23,14 @@ public class TaskA {
         options.addArguments("--start-fullscreen");
         WebDriver driver = new ChromeDriver(options);
 
-/*
-1. Open “https://demoqa.com/login”
-2. Login (create your own user before)
-3. Go to Book Store (Here you can catch ElementClickIntercepted Exception, to
-avoid this use scroll or click using JavaScriptExecutor)
-4. Choose Git Pocket Guide
-5. Click “Add to your Collection”
-6. Handle alert similar as from last lesson (Tap Ok)
-7. Click Back To Store
-8. Click "You Don’t Know JS”
-9. “Add to your Collection”
-10.Handle Alert
-11. Go to “Profile”
-12.Click “Delete All Books"
- */
-
         // Open “https://demoqa.com/login”
+
         driver.get("https://demoqa.com/login");
 
         // Login
 
         By locator1 = By.xpath("//input[@id='userName']");
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
         driver.findElement(locator1).sendKeys("testY");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Qwerty1@");
@@ -93,9 +78,6 @@ avoid this use scroll or click using JavaScriptExecutor)
 
         driver.findElement(By.xpath("//button[@id='addNewRecordButton']")).click();
 
-        driver.switchTo().defaultContent();
-
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
         // Click "You Don’t Know JS”
 
@@ -122,11 +104,11 @@ avoid this use scroll or click using JavaScriptExecutor)
 
         // Click “Delete All Books"
 
-        driver.switchTo().defaultContent();
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
         By locator7 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
         webDriverWait.until(ExpectedConditions.elementToBeClickable(locator7));
+        driver.findElement(locator7).click();
 
 //        By locator8 = By.xpath("//button[@id='closeSmallModal-ok']");
 //        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));

@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -16,18 +17,22 @@ public class TaskD {
     @Test
     public void fourth() {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-fullscreen");
+        WebDriver driver = new ChromeDriver(options);
 
         driver.get("https://www.amazon.com/");
 
         By locator1 = By.xpath("//a [contains(@href,'/deals?ref_=nav_cs_gb')]");
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(locator1));
         driver.findElement(locator1).click();
 
 
-        By locator2 = By.xpath("//div[@data-deal-id='c49d0841']");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
+        By locator2 = By.xpath("//img[@src='https://m.media-amazon.com/images/I/41djj0yjJFL._AC_UF226,226_FMjpg_.jpg']");
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator2));
         driver.findElement(locator2).click();
 
         By locator3 = By.xpath("//div[@class='a-section octopus-dlp-image-shield']");
