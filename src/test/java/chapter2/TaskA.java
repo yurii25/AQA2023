@@ -23,8 +23,26 @@ public class TaskA {
         options.addArguments("--start-fullscreen");
         WebDriver driver = new ChromeDriver(options);
 
+/*
+1. Open “https://demoqa.com/login”
+2. Login (create your own user before)
+3. Go to Book Store (Here you can catch ElementClickIntercepted Exception, to
+avoid this use scroll or click using JavaScriptExecutor)
+4. Choose Git Pocket Guide
+5. Click “Add to your Collection”
+6. Handle alert similar as from last lesson (Tap Ok)
+7. Click Back To Store
+8. Click "You Don’t Know JS”
+9. “Add to your Collection”
+10.Handle Alert
+11. Go to “Profile”
+12.Click “Delete All Books"
+ */
 
+        // Open “https://demoqa.com/login”
         driver.get("https://demoqa.com/login");
+
+        // Login
 
         By locator1 = By.xpath("//input[@id='userName']");
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -43,7 +61,7 @@ public class TaskA {
 
         driver.findElement(locator2).click();
 
-
+        // Go to Book Store
 
         By locator3 = By.xpath("//button[@id='gotoStore']");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator3));
@@ -51,29 +69,35 @@ public class TaskA {
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         driver.findElement(locator3).click();
 
+        // Choose Git Pocket Guide
+
         By locator4 = By.xpath("//a[text()='Git Pocket Guide']");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator4));
         driver.findElement(locator4).click();
 
+        // Click “Add to your Collection”
 
         By locator5 = By.xpath("//button[text()='Add To Your Collection']");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator5));
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+        // Handle alert similar as from last lesson (Tap Ok)
+
         driver.findElement(locator5).click();
 
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+        // Click Back To Store
 
         driver.findElement(By.xpath("//button[@id='addNewRecordButton']")).click();
-
-
 
         driver.switchTo().defaultContent();
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+        // Click "You Don’t Know JS”
 
         By locator6 = By.xpath("//a[contains(@href,'/books?book=9781491904244')]");  //  //a[text()='You Don't Know JS']
 
@@ -82,29 +106,27 @@ public class TaskA {
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         driver.findElement(locator6).click();
 
+        // “Add to your Collection”
+
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator5));
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+        // Handle Alert
+
         driver.findElement(locator5).click();
 
+        // Go to “Profile”
 
         driver.findElement(By.xpath("//span[text()='Profile']")).click();
 
+        // Click “Delete All Books"
 
         driver.switchTo().defaultContent();
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-
         By locator7 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
         webDriverWait.until(ExpectedConditions.elementToBeClickable(locator7));
-
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-        driver.findElement(locator7).click();
-
-//        driver.switchTo().alert().accept();
-//        driver.switchTo().defaultContent();
-
 
 //        By locator8 = By.xpath("//button[@id='closeSmallModal-ok']");
 //        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));
