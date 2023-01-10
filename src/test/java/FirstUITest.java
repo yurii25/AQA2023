@@ -51,6 +51,6 @@ public class FirstUITest {
 //        WebElement result1 = new WebDriverWait(driver, Duration.ofSeconds(1))
 //                .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@ng-click='customer()']")));
 
-    // 2
+    // 3
 
 }
