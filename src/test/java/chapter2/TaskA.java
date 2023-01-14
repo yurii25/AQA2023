@@ -1,9 +1,7 @@
 package chapter2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,7 +28,7 @@ public class TaskA {
         // Login
 
         By locator1 = By.xpath("//input[@id='userName']");
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
         driver.findElement(locator1).sendKeys("testY");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Qwerty1@");
@@ -67,23 +65,30 @@ public class TaskA {
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-        // Handle alert similar as from last lesson (Tap Ok)
-
         driver.findElement(locator5).click();
 
+        // Handle alert similar as from last lesson (Tap Ok)
 
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+        new WebDriverWait(driver, Duration.ofSeconds(10, 0))
+                .ignoring(NoAlertPresentException.class)
+                .until(ExpectedConditions.alertIsPresent());
+
+        driver.switchTo().alert().accept();
+
 
         // Click Back To Store
+
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
         driver.findElement(By.xpath("//button[@id='addNewRecordButton']")).click();
 
 
         // Click "You Don’t Know JS”
 
-        By locator6 = By.xpath("//a[contains(@href,'/books?book=9781491904244')]");  //  //a[text()='You Don't Know JS']
+        By locator6 = By.xpath("//a[contains(@href,'/books?book=9781491904244')]");
 
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator6));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator6));
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         driver.findElement(locator6).click();
@@ -94,28 +99,52 @@ public class TaskA {
 
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
+        driver.findElement(locator5).click();
+
         // Handle Alert
 
-        driver.findElement(locator5).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(10, 0))
+                .ignoring(NoAlertPresentException.class)
+                .until(ExpectedConditions.alertIsPresent());
+
+        driver.switchTo().alert().accept();
+
 
         // Go to “Profile”
 
-        driver.findElement(By.xpath("//span[text()='Profile']")).click();
+        By locator7 = By.xpath("//span[text()='Profile']");
+
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator7));
+
+        driver.findElement(locator7).click();
 
         // Click “Delete All Books"
 
+
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-        By locator7 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator7));
-        driver.findElement(locator7).click();
 
-//        By locator8 = By.xpath("//button[@id='closeSmallModal-ok']");
-//        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator8));
+
+        WebElement element = driver.findElement(By.xpath("//div[@class='do']/button[text()='Delete All Books']"));
+
+        js.executeScript("arguments[0].click();", element);
+
+
+
+//        By locator8 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
+//        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator8));
 //        driver.findElement(locator8).click();
+
+//        By locator9 = By.xpath("//button[@id='closeSmallModal-ok']");
+//        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator9));
+//        driver.findElement(locator9).click();
 //
 //        driver.switchTo().defaultContent();
 
 //        driver.quit();
     }
+
 }
+
+
