@@ -125,24 +125,26 @@ public class TaskA {
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
 
+        WebDriverWait webDriverWait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        webDriverWait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Delete All Books']")));
 
         WebElement element = driver.findElement(By.xpath("//div[@class='do']/button[text()='Delete All Books']"));
-
         js.executeScript("arguments[0].click();", element);
 
+        // Tap OK on the modal screen
 
+        By locator9 = By.xpath("//button[@id='closeSmallModal-ok']");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator9));
+        driver.findElement(locator9).click();
 
-//        By locator8 = By.xpath("//div[@class='do']/button[text()='Delete All Books']");
-//        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator8));
-//        driver.findElement(locator8).click();
+        // Handle Alert
+        new WebDriverWait(driver, Duration.ofSeconds(10, 0))
+                .ignoring(NoAlertPresentException.class)
+                .until(ExpectedConditions.alertIsPresent());
 
-//        By locator9 = By.xpath("//button[@id='closeSmallModal-ok']");
-//        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator9));
-//        driver.findElement(locator9).click();
-//
-//        driver.switchTo().defaultContent();
+        driver.switchTo().alert().accept();
 
-//        driver.quit();
+        driver.quit();
     }
 
 }
